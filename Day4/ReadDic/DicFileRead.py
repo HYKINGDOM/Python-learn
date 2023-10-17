@@ -6,6 +6,7 @@ source_folder = 'D:\centos\download'
 destination_folder = 'D:\centos'
 
 
+
 def organize_files(source_folder, destination_folder):
     # 遍历源文件夹中的所有文件和子文件夹
     for root, dirs, files in os.walk(source_folder):
