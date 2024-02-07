@@ -1,12 +1,12 @@
 import time
+
 import requests
 from prometheus_client import start_http_server, CollectorRegistry, Gauge
-
 
 reg = CollectorRegistry()
 gauge = Gauge(
     'rank', '人气榜排名',
-    ['stock_id'], registry=reg
+    ['stock_id', 'rk'], registry=reg
 )
 
 
@@ -19,7 +19,7 @@ def process_request():
     }
     result = requests.post(url, json=kwargs).json()
     for i in result.get("data", []):
-        gauge.labels(stock_id=i["sc"]).set(i["rk"])
+        gauge.labels(stock_id=i["sc"], rk = i["rk"]).set(i["rk"])
     time.sleep(60)
 
 
