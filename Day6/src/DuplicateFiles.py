@@ -3,7 +3,7 @@ import mimetypes
 import os
 
 # 文件夹路径
-folder_path = 'D:\centos\安装包'
+folder_path = 'D:\centos\压缩包'
 
 
 def get_file_hash(file_path):

@@ -2,7 +2,7 @@ import os
 import shutil
 
 # 示例用法
-source_folder = 'D:\centos\download'
+source_folder = 'D:\download'
 destination_folder = 'D:\centos'
 
 
