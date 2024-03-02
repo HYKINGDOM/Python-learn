@@ -3,7 +3,7 @@ import mimetypes
 import os
 
 # 文件夹路径
-folder_path = 'D:\centos\压缩包'
+folder_path = 'F:\\WeGame\\视频'
 
 
 def get_file_hash(file_path):
@@ -30,6 +30,12 @@ def find_duplicate_files(folder_path):
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             file_path = os.path.join(root, file)
+
+            # 跳过制定定大小的文件
+            file_size = os.path.getsize(file_path)
+
+            if 200000000 > file_size or file_size > 300000000:
+                continue
 
             # 获取文件类型
             file_type, _ = mimetypes.guess_type(file_path)

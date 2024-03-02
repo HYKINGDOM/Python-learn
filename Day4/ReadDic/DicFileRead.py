@@ -2,9 +2,8 @@ import os
 import shutil
 
 # 示例用法
-source_folder = 'D:\download'
-destination_folder = 'D:\centos'
-
+source_folder = 'E:\\20231028'
+destination_folder = 'E:\\BaiduNetdiskDownload'
 
 
 def organize_files(source_folder, destination_folder):
@@ -15,20 +14,23 @@ def organize_files(source_folder, destination_folder):
             file_extension = os.path.splitext(file)[1].lower()  # 获取文件扩展名（转换为小写）
 
             # 根据文件类型进行分类
-            if file_extension in ['.mp4', '.mkv', '.m4v']:
+            if file_extension in ['.mp4', '.mkv', '.m4v', '.avi', '.wmv', '.ts', '.mov']:
                 dest_folder = os.path.join(destination_folder, '视频')
             elif file_extension in ['.mp3', '.wav']:
                 dest_folder = os.path.join(destination_folder, '音频')
             elif file_extension in ['.png', '.jpg', '.gif', '.webp']:
                 dest_folder = os.path.join(destination_folder, '图片')
-            elif file_extension in ['.exe', '.msi', '.iso']:
+            elif file_extension in ['.exe', '.msi', '.iso', '.apk']:
                 dest_folder = os.path.join(destination_folder, '安装包')
-            elif file_extension in ['.pdf', '.doc', '.docx', 'xls', '.pptx', '.xls', '.xlsx', '.csv', '.txt', '.mhtml']:
+            elif file_extension in ['.pdf', '.doc', '.docx', 'xls', '.pptx', '.xls', '.xlsx', '.csv', '.txt', '.mhtml',
+                                    '.chm']:
                 dest_folder = os.path.join(destination_folder, '文档')
             elif file_extension in ['.zip', '.7z', '.rar']:
                 dest_folder = os.path.join(destination_folder, '压缩包')
             elif file_extension in ['.xml', '.sql', '.json', '.log', '.jar', '.yaml', '.yml', '.gz']:
                 dest_folder = os.path.join(destination_folder, '开发')
+            elif file_extension in ['.torrent']:
+                dest_folder = os.path.join(destination_folder, '种子')
             else:
                 continue  # 跳过不需要处理的文件类型
 
