@@ -1,6 +1,7 @@
 import os
 
-#遍历一个文件夹下所有的.java文件,找到行数最多的前三个文件, 输出其文件名和文件路径
+
+# 遍历一个文件夹下所有的.java文件,找到行数最多的前三个文件, 输出其文件名和文件路径
 
 def find_top_java_files(directory, top_n=3):
     # 存储文件名和行数
@@ -21,7 +22,6 @@ def find_top_java_files(directory, top_n=3):
     # 输出结果
     for file_name, file_path, line_count in top_files:
         print(f"文件名: {file_name}, 路径: {file_path}, 行数: {line_count}")
-
 
 
 if __name__ == '__main__':
