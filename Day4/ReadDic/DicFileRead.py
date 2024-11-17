@@ -2,8 +2,8 @@ import os
 import shutil
 
 # 示例用法
-source_folder = 'E:\\20231028'
-destination_folder = 'E:\\BaiduNetdiskDownload'
+source_folder = 'F:\\迅雷下载'
+destination_folder = 'F:\\WeGame'
 
 
 def organize_files(source_folder, destination_folder):

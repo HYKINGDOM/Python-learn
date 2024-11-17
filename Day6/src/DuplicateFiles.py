@@ -34,7 +34,7 @@ def find_duplicate_files(folder_path):
             # 跳过制定定大小的文件
             file_size = os.path.getsize(file_path)
 
-            if 200000000 > file_size or file_size > 300000000:
+            if 100000000 > file_size or file_size > 200000000:
                 continue
 
             # 获取文件类型
