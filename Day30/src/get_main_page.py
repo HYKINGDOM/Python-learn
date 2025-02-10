@@ -14,14 +14,14 @@ if __name__ == '__main__':
     ele_list = tab.eles('tag:a')
 
     # 基础URL
-    base_url = 'https://juejin.cn'
+    base_url = url + '/post'
 
     # 提取所有的<a>标签的href属性
     links = []
     for ele in ele_list:
         href = ele.attr('href')
         # 拼接基础URL和相对路径
-        if href:
+        if href and href.startswith(base_url):
             links.append(href)
 
     # 打印所有的链接
