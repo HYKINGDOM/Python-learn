@@ -27,19 +27,15 @@ def generate_time_based_hash(length):
     return hash_hex[:length]
 
 
-if __name__ == '__main__':
-
+def get_all_image_by_url(url):
     tab = Chromium().latest_tab
     # 隐藏浏览器窗口
     tab.set.window.hide()
-    tab.get('https://juejin.cn/post/7441617140229554214')
+    tab.get(url)
     print(tab.title)
-
     tab.scroll.to_bottom()
-
     # 在页面中查找所有元素，获取其静态版本
     ele_list = tab.eles('tag:img')
-
     for ele in ele_list:
         img_url = ele.attr('src')
         print(img_url)
@@ -67,3 +63,8 @@ if __name__ == '__main__':
             print(f"Error: {e} , http url :{img_url}")
         except requests.exceptions.RequestException as e:
             print(f"HTTP Error: {e}")
+
+
+if __name__ == '__main__':
+    url = 'https://juejin.cn/post/7441617140229554214'
+    get_all_image_by_url(url)
