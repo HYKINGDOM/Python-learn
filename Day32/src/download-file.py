@@ -34,7 +34,7 @@ def download_files_from_csv(csv_file_path, download_folder):
                 print(f'Error downloading {id}.pdf: {e}')
 
 # 指定 CSV 文件路径和下载文件夹路径
-csv_file_path = 'D:\\server-log\\platform_cloud_sys_oss_02.csv'
+csv_file_path = 'D:\\server-log\\platform_cloud_sys_oss_07.csv'
 download_folder = 'D:\\server-log\\file'
 
 
