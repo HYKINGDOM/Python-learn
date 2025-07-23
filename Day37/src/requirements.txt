@@ -1,0 +1,6 @@
+# PDF转Markdown所需依赖
+flask==3.0.0
+werkzeug==3.0.1
+pymupdf==1.26.3
+pymupdf4llm==0.0.27
+pillow==10.1.0

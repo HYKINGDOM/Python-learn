@@ -1,0 +1,6 @@
+server:
+  port: 8187
+  servlet:
+    context-path: /smb
+  tomcat:
+    connection-timeout: 3000000  # 300秒
