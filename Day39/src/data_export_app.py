@@ -14,9 +14,9 @@ class DataExportApp:
         self.db_config = {
             'host': '10.0.220.30',
             'port': 3306,
-            'database': 'temp_20220629',
-            'user': 'platform',
-            'password': 'Platform_1314',
+            'database': 'adsadsa',
+            'user': 'dasdasd',
+            'password': 'adsdasd',
             'charset': 'utf8',
             'use_unicode': True,
         }
@@ -267,18 +267,7 @@ class DataExportApp:
             
             # 构建SQL查询
             query = f"""SELECT id, agent_id, agent_name, advertiser_id, advertiser_name, 
-                first_industry, second_industry, account_source, company_name, 
-                audit_pass_time, account_status, register_time, cost, cash_cost, 
-                bid_cost, brand_cost, grants_cost, cpc_cost, cpm_cost, ocpc_cost, 
-                cpa_cost, ocpm_cost, cpv_cost, cpt_cost, gd_cost, `show`, cpm, 
-                click, ctr, cpc, transfer_count, today_cost, transfer_amount, 
-                history_cost, register_days, first_cost_time, cash_balance, 
-                rant_balance, year, month, day, date, is_sync, native_province_cost, 
-                out_province_cost, out_province_ids, is_sync_native, first_recharge_amount, 
-                first_recharge_time, last_renew_time, total_renew_number, total_balance, 
-                valid_balance, is_sycn_actual, saler_user_id, saler_user_name, 
-                saler_dept_id, saler_dept_name, oper_user_id, oper_user_name, 
-                oper_dept_id, oper_dept_name, create_time, create_user, update_time, 
+                first_industry, second_industry,  create_time, create_user, update_time, 
                 update_user, remark, del_flag 
                 FROM dsp_advertiser_cost 
                 WHERE create_time >= '{start_date_str}' AND create_time < '{end_date_str}'"""
